@@ -1,30 +1,30 @@
 package imposto;
+
 import model.Orcamento;
 
+public class ImpostoMuitoAlto extends TemplateImpostoCondicional {
 
-public class ICPP extends TemplateImpostoCondicional {
-
-	public ICPP() {
+	public ImpostoMuitoAlto() {
 		super();
 	}
 	
-	public ICPP(Imposto outroImposto) {
+	public ImpostoMuitoAlto(Imposto outroImposto) {
 		super(outroImposto);
 	}
 	
 	@Override
 	protected double taxacaoMinima(Orcamento orcamento) {
-		return orcamento.getValor() * 0.05;
+		return 0;
 	}
 
 	@Override
 	protected double taxacaoMaxima(Orcamento orcamento) {
-		return orcamento.getValor() * 0.07;
+		return orcamento.getValor() * 0.2;
 	}
 
 	@Override
 	protected boolean usaTaxacaoMaxima(Orcamento orcamento) {
-		return orcamento.getValor() > 500d;
+		return true;
 	}
 
 }

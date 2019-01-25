@@ -7,6 +7,14 @@ import model.Orcamento;
 
 public class IKVC extends TemplateImpostoCondicional {
 
+	public IKVC() {
+		super();
+	}
+	
+	public IKVC(Imposto outroImposto) {
+		super(outroImposto);
+	}
+	
 	@Override
 	protected double taxacaoMinima(Orcamento orcamento) {
 		return orcamento.getValor() * 0.06;

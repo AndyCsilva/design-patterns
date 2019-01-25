@@ -8,6 +8,14 @@ import model.Orcamento;
 
 public class IHIT extends TemplateImpostoCondicional {
 
+	public IHIT() {
+		super();
+	}
+	
+	public IHIT(Imposto outroImposto) {
+		super(outroImposto);
+	}
+	
 	@Override
 	protected double taxacaoMinima(Orcamento orcamento) {
 		return (orcamento.getValor() * 0.01) * orcamento.getItens().size();

@@ -1,10 +1,13 @@
 package model;
 
+import java.util.Calendar;
+
 public class Conta {
 	
 	private long numero;
 	private double saldo;
 	private String titular;
+	private Calendar dataAbertura;
 	
 	public double getSaldo() {
 		return saldo;
@@ -34,5 +37,19 @@ public class Conta {
 	 */
 	public void setNumero(long numero) {
 		this.numero = numero;
+	}
+
+	/**
+	 * @return the dataAbertura
+	 */
+	public Calendar getDataAbertura() {
+		return dataAbertura;
+	}
+
+	/**
+	 * @param dataAbertura the dataAbertura to set
+	 */
+	public void setDataAbertura(Calendar dataAbertura) {
+		this.dataAbertura = dataAbertura;
 	}
 }
